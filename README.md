@@ -1,2 +1,2 @@
-Демо:https://pavelcydep.github.io/react-blog/
+Демо: https://pavelcydep.github.io/react-blog-api/
 
