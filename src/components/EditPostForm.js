@@ -1,10 +1,10 @@
 import close from "../images/close.svg";
 import React, { Component } from 'react';
-export class AddPostForm extends Component{
+export class EditPostForm extends Component{
     state={
-        title:'',
-        description:'',
-        image:''
+        title:this.props.selectedPost.title,
+        description:this.props.selectedPost.description,
+        image:this.props.selectedPost.image,
     }
     handleTitleOnchange=e=>{
         this.setState({
@@ -28,15 +28,18 @@ export class AddPostForm extends Component{
            description:e.target.value
         })
     }
-    createPost=()=>{
+    
+    savePost=(e)=>{
+        e.preventDefault();
         const post={
-          
+          id:this.props.selectedPost.id,
             title: this.state.title,
             description:this.state.description ,
-            liked: false,
-            image: this.state.image   
+            liked: this.props.selectedPost.liked,//,беру значения из пропс,чтобы оно не изменялось
+            image: this.state.image,
+
         }
-        this.props.addNewPost(post);
+        this.props.editPost(post);
         this.props.togglePopupClose();
     }
     componentDidMount() {
@@ -48,7 +51,7 @@ export class AddPostForm extends Component{
     }
     render(){
     const togglePopupClose= this.props.togglePopupClose;
-    
+    console.log(this.props)
 
 
     return(
@@ -63,7 +66,7 @@ export class AddPostForm extends Component{
             
           <h3 class="popup__title">Добавить пост</h3>
           <form class="popup__form"
-          onSubmit={this.createPost}
+          onSubmit={this.savePost}
            name="new" novalidate>
            
             <input

@@ -10,7 +10,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import EditIcon from '@mui/icons-material/Edit';
 
 const useStyles = makeStyles({
     root: {
@@ -25,13 +25,19 @@ export const PostItem = ({
     likePost,
     liked,
     deletePost,
-    image }) => {
+    image,
+    togglePopupEdit,
+    handleSelectPost
+ }) => {
 
     console.log(title)
     const heartStyles = liked ? "crimson" : "black";
     const classes = useStyles();
 
-
+const showEditForm=()=>{
+    togglePopupEdit();
+    handleSelectPost();
+}
 
 
 
@@ -53,7 +59,9 @@ export const PostItem = ({
             </CardContent>
             <CardActions>
                 <Button size="small"> <FavoriteIcon onClick={likePost} style={{ fill: heartStyles }} /></Button>
+                <Button size="small"> <EditIcon onClick={showEditForm} /></Button>
                 <Button size="small"> < DeleteIcon onClick={deletePost} /></Button>
+                
             </CardActions>
         </Card>
 

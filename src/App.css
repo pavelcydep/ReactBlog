@@ -3,9 +3,21 @@
 
 
 .App {
-    text-align: center;
+    
+   position: relative;
   }
-  
+  .circular{
+    position:absolute;
+    top: 100px;
+    right: 700px;
+    opacity: 7;
+  }
+  .title{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+ align-items: center;
+  }
   .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -43,4 +55,13 @@
   }
   button{
       cursor:pointer;
+  }
+  .activeLink{
+color:aqua;
+text-decoration: none;
+  }
+  .nav-link{
+    color:antiquewhite;
+text-decoration: none;
+text-transform: uppercase;
   }

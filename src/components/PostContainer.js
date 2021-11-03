@@ -1,7 +1,7 @@
 import React from 'react';
 import {Post} from './Post';
 
-function PostContainer() {
+export const PostContainer=()=> {
   return (
    <>
       <div className="container">
@@ -11,4 +11,3 @@ function PostContainer() {
   );
 }
 
-export default  PostContainer;
