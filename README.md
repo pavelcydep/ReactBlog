@@ -1,6 +1,6 @@
-![alt text]()
+![alt text](src/images/blog3)
 =============
-Цитаты от Гомера Симпсона
+Блог
 =============
 Это мой pet-проект, который сделал в целях изучения фреймворка React. 
 ****
@@ -11,7 +11,7 @@
 
 ### Склонировать проект на ПК:
 
-    git clone https://github.com/pavelcydep/react-blog.git
+    git clone 
  
 
 
@@ -40,5 +40,5 @@
 
 Стек технологий
 ===============
-REACT, HTML, CSS, JS,
+REACT, HTML, CSS, JS, API
 
