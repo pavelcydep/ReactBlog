@@ -1,4 +1,4 @@
-![alt text](src/images/blog3)
+![alt text](src/images/Блог3.gif)
 =============
 Блог
 =============
@@ -11,7 +11,7 @@
 
 ### Склонировать проект на ПК:
 
-    git clone 
+    git clone https://github.com/pavelcydep/ReactBlog.git
  
 
 
