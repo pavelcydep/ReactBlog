@@ -33,7 +33,7 @@ const handleLogaut=()=>{
             <NavLink 
             activeClassName="activeLink" 
             className="nav-link"
-             exact to ="/">Главная</NavLink>
+             exact to ={'*'}>Главная</NavLink>
             </nav>
             </Button>
             

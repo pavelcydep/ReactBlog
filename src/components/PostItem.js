@@ -30,7 +30,7 @@ export const PostItem = ({
     handleSelectPost
  }) => {
 
-    console.log(title)
+    
     const heartStyles = liked ? "crimson" : "black";
     const classes = useStyles();
 

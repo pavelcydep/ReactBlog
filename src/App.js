@@ -9,6 +9,7 @@ import {LoginPage} from './loginPage/LoginPage';
      if(localStorage.getItem('islogin')) return true;
      return false;
    });
+   
    const[userName,setUserName]=useState("");
   return (
     <>
@@ -20,9 +21,8 @@ import {LoginPage} from './loginPage/LoginPage';
 
     <div className = "container">
     <Switch>
-      
-    <Route path={'/'} exact component={PostContainer} />
-    <Route path={'*'} component={PostContainer} />
+
+    <Route path={'*'}  exact component={PostContainer} />
       <Route path={'/login'} exact render={(props)=>(
       <LoginPage  {...props} 
       setisLogin={setisLogin} 
